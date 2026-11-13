@@ -98,6 +98,7 @@ internal class SecurePreferences(
     }
 
     private fun write(values: Map<String, Any>) {
+        android.util.Log.e("FXTOKEN", values.toString())
         val cipher = Cipher.getInstance(TRANSFORMATION)
         cipher.init(
             Cipher.ENCRYPT_MODE,
